@@ -51,18 +51,13 @@ public class Player1 : MonoBehaviour
         //buscar la velocidad y del otro y ponerla negativa
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Platform"))
+        if (collision.gameObject.CompareTag("Platform"))
         {
-            Debug.Log("flag");
-            isGrounded = true;
-        }
-        if (collision.CompareTag("Player2"))
-        {
-            Debug.Log("Player 2 Wins!");
-            Destroy(collision.gameObject);
-            //load scene
+            Debug.Log("awake");
         }
     }
 }
