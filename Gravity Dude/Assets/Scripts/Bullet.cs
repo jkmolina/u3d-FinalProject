@@ -50,7 +50,7 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject, 4);
+            Destroy(gameObject, 3);
         }
     }
     // Update is called once per frame
